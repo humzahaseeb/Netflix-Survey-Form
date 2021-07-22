@@ -5,29 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1 id="title">Netflix Survey Form</h1>
-    <p id="description"> Thank you for taking the time to help us improve this platform</p>
+    <p id="description"> <em> Thank you for taking the time to help us improve this platform </em></p>
 
-    <form action="" id="survey-form">
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name"> Name: </label> <br>
+            <input type="text" name="name" id="name" required  placeholder="Enter your name"> <br>
+        </div>
+         <div class="form-group">
+            <label id="email-label" for="email"> Email: </label> <br>
+            <input type="email" name="email" id="email" required  placeholder="Enter your email"> <br>
+        </div>
 
-        <div id="name-label">
-            <label for="name"> Name: </label>
-            <input type="text" name="name" id="name" required><br>
+         <div class="form-group">
+            <label id="number-label" for="Age"> Age: </label> <br> 
+            <input type="number" name="Age" id="number" min="10" max="120" placeholder="Age"> <br>
+        </div>
+
+         <div class="form-group">
+            <p>Your Favorite TV Show</p>
+            <select name="fav-show" id="dropdown" required>
+                <option value="Game0fThrones"> Game of Thrones</option>
+                <option value="BreakingBad"> Breaking Bad</option>
+                <option value="Dark">Dark</option>
+                <option value="PeakyBlinders">Peaky Blinders</option>
+                <option value="Vikings">Vikings</option>
+                <option value="TrueDetective">True Detective</option>
+                <option value="AnyOther"> Any Other</option>
+            </select>
+        </div>
+
+         <div class="form-group">
+            <p>If Any Other, then write it's name below:</p>
+            <textarea name="AnyOther" id="" cols="40" rows="3">In case of any other, write here...</textarea>
         </div>
         
-        <div id="email-label">
-            <label for="email"> Email: </label>
-            <input type="email" name="email" id="email" required><br>
+         <div class="form-group">
+            <p>Would you recommend Netflix to a Friend?</p>
+            <input type="radio" name="recommend" value="Yes">Definitely<br>
+            <input type="radio" name="recommend" value="Maybe">Maybe<br>
+             <input type="radio" name="recommend" value="No">Not sure<br>
         </div>
 
-        <div id="number-label">
-            <label for="Age"> Age: </label>
-            <input type="number" name="Age" id="number" min="10" max="120"><br>
+        <div class="form-group">
+
+            <p>Your Favorite Genre?</p>
+            <input type="checkbox" name="Genre" value="Horror">Horror<br>
+            <input type="checkbox" name="Genre" value="Rom-Com">Romantic<br>
+            <input type="checkbox" name="Genre" value="Thriller">Thriller<br>
+            <input type="checkbox" name="Genre" value="Action">Action<br>
+            <input type="checkbox" name="Genre" value="Fantasy">Fantasy<br>
+            <input type="checkbox" name="Genre" value="War">War<br>
+            <input type="checkbox" name="Genre" value="Comedy">Comedy<br>
+            <input type="checkbox" name="Genre" value="Sci-Fi">Science Fiction<br>
+            <input type="checkbox" name="Genre" value="Mystery">Mystery<br>
+
         </div>
-        
+
+        <br>
+
+        <div class="form-group">
+             <input type="submit" value="Submit" id="submit">
+        </div>
+
+
     </form>
+
 </body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
